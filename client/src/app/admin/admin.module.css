@@ -1,0 +1,16 @@
+.action
+{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+.btn
+{
+    text-decoration: none;
+    color: white;
+    background: none;
+    border:none;
+}
+.btn:hover{
+    cursor: pointer;
+}

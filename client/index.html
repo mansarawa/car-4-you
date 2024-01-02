@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @keyframes zoomIn {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes zoomOut {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(0.8);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .zoom-in-out-text {
+      font-size: 24px;
+      animation: zoomIn 3s ease infinite alternate;
+    }
+
+    .zoom-out-in-text {
+      font-size: 24px;
+      animation: zoomOut 3s ease infinite alternate;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="zoom-in-out-text">Zoom In/Out</div>
+  <div class="zoom-out-in-text">Zoom Out/In</div>
+
+</body>
+</html>
