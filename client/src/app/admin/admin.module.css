@@ -1,8 +1,8 @@
 .action
 {
     display: flex;
-    justify-content: space-evenly;
-    padding: 5px;
+    justify-content:space-evenly;
+    padding:5px;
 }
 .btn
 {

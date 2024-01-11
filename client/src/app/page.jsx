@@ -4,7 +4,10 @@ import Link from 'next/link'
 import Page from './page.module.css'
 import Image from 'next/image'
 import Fortuner from '../../assets/fortuner.png'
+import Thar from '../../assets/thar.jpg'
 import UserPhoto from '../../assets/userphoto.jpg'
+import Swift from '../../assets/swift.jpg'
+import Ertiga from '../../assets/ertiga.jpeg'
 export default function Home() {
  
    const user=JSON.parse(localStorage.getItem('user'))
@@ -65,21 +68,21 @@ export default function Home() {
               :<Link href={'/login'} className={Page.rent} >Rent Now</Link>}
           </div>
           <div className={Page.cars}>
-            <Image src={Fortuner} className={Page.carslogo} />
+            <Image src={Thar} className={Page.carslogo} />
             <h4 className={Page.model}>2017</h4>
             <h3 style={{marginBottom:'1%'}}>Fortuner</h3>
             <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>
             <Link href={'/book'} className={Page.rent}> Rent Now</Link>
           </div>
           <div className={Page.cars} >
-            <Image src={Fortuner} className={Page.carslogo} />
+            <Image src={Swift} className={Page.carslogo} />
             <h4 className={Page.model}>2017</h4>
             <h3 style={{marginBottom:'1%'}}>Fortuner</h3>
             <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>
             <Link href={'/book'} className={Page.rent}> Rent Now</Link>
           </div>
           <div className={Page.cars}>
-            <Image src={Fortuner} className={Page.carslogo} />
+            <Image src={Ertiga} className={Page.carslogo} />
             <h4 className={Page.model}>2017</h4>
             <h3 style={{marginBottom:'1%'}}>Fortuner</h3>
             <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>

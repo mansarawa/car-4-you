@@ -8,6 +8,9 @@ import show from './routes/showbooking.js';
 import adminshow from './routes/showbookingforadmin.js';
 import adminregister from './routes/adminregister.js';
 import adminlogin from './routes/adminlogin.js';
+import accept from './routes/bookupdate.js';
+import reject from './routes/reject.js';
+import completed from './routes/completed.js';
 const app=express();
 
 app.use(cors());
@@ -20,6 +23,9 @@ app.use('/',show)
 app.use('/',adminshow)
 app.use('/',adminregister)
 app.use('/',adminlogin)
+app.use('/',accept)
+app.use('/',reject)
+app.use('/',completed)
 app.listen(3002,()=>{
     console.log('start')
 })

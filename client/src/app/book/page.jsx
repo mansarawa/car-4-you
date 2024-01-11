@@ -13,7 +13,6 @@ export default function page  ()  {
   const [process, setProcess] = useState('process')
   const user=JSON.parse(localStorage.getItem('user'))
    const userid=user._id
- 
   console.log(user)
   const handlesubmit=async()=>{
     const res=await fetch('http://localhost:3002/book',{
