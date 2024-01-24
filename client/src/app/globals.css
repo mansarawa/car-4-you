@@ -16,25 +16,26 @@
 table{
   text-align: center;
   margin-left: 5%;
-  border: 2px solid white;
+ 
   border-collapse: collapse;
   color: white;
-  background-color: #0d6efd;
+  
   width: 90%;
 }
-tr{
-  border-left: 1px solid white;
-  border-bottom: 1px solid white;
-}
+
 th{
   width: 15%;
+  font-size: large;
+  margin: 5px;
   padding: 5px;
-  border-left: 1px solid white;
-  border-bottom: 1px solid white;
+  background-color: #0d6efd;
+  /* border-left: 1px solid white;
+  border-bottom: 1px solid white; */
 }
 td{
   width: 15%;
   padding: 5px;
-  border-right: 1px solid white;
-  border-bottom: 1px solid white;
+  color: black;
+  font-size:medium;
+  border-bottom: 0.1px solid  black;
 }

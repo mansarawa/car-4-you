@@ -7,22 +7,22 @@ import Fortuner from '../../assets/fortuner.png'
 import Thar from '../../assets/thar.jpg'
 import UserPhoto from '../../assets/userphoto.jpg'
 import Swift from '../../assets/swift.jpg'
+import { useRouter } from 'next/navigation'
 import Ertiga from '../../assets/ertiga.jpeg'
 export default function Home() {
- 
+  const router=useRouter()
+
    const user=JSON.parse(localStorage.getItem('user'))
   const handlelogout=async(e)=>{
     e.preventDefault();
     localStorage.clear("user") 
+    router.push('/')
   }
   return (
     <body style={{ margin: '0px' }}>
-
-
       <div className={Page.container}>
         <nav className={Page.hnav}>
           <ul className={Page.ul}>
-
             <li className={Page.li}><Link href='/' className={Page.link}>Home</Link></li>
             <li className={Page.li}><Link href='/service' className={Page.link}>Services</Link></li>
             <li className={Page.li}><Link href='/terms' className={Page.link}>Terms&conditions</Link></li>

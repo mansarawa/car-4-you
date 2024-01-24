@@ -34,66 +34,56 @@ const page = () => {
           //setAlert(user.username)
           router.push('/')
         }
-        else{
-          setState(true)
-          if(state)
-               {
-                 setAlert('Please fill right info')
-                 setTimeout(()=>{
-                  setState(false)
-                 },[2000])
-               }     
+        // else{
+        //   setState(true)
+        //   if(state)
+        //        {
+        //         //  setAlert('Please fill right info')
+        //          setTimeout(()=>{
+        //           setState(false)
+        //          },[2000])
+        //        }     
           
-        }
-        // useEffect(() => {
-          
-        //     if(state)
-        //     {
-        //       setAlert('Please fill right info')
-        //       setTimeout(()=>{
-        //         setState(false)
-        //       },[2000])
-        //     }          
-        // }, [state])
+        // }
     }
   return (
    <>
-      <div class="alert alert-danger" id={Login.alert1} role="alert">
+      {/* <div class="alert alert-danger" id={Login.alert1} role="alert">
         {alert}
-      </div>
-   <div className='container'>
-    <form onSubmit={handleSubmit}>
-  <div className="mb-3">
-    <label htmlFor="exampleInputEmail1" className="form-label">
+      </div> */}
+   <div className={Login.container}>
+    <form onSubmit={handleSubmit} className={Login.form}>
+  <div className={Login.mb3}>
+    <label htmlFor="exampleInputEmail1" className={Login.label}>
       Email address
     </label>
     <input
       type="email"
+      
       name='email'
       onChange={(e)=>setEmail(e.target.value)}
-      className="form-control"
+      className={Login.input}
       id="exampleInputEmail1"
       aria-describedby="emailHelp"
       required
     />
-    <div id="emailHelp" className="form-text">
-      We'll never share your email with anyone else.
-    </div>
+
   </div>
-  <div className="mb-3">
-    <label htmlFor="exampleInputPassword1" className="form-label">
+  <div className={Login.mb3}>
+    <label htmlFor="exampleInputPassword1" className={Login.label}>
       Password
     </label>
     <input
-      type="password" name='password' required onChange={(e)=>setPassword(e.target.value)} className="form-control"
+      type="password" name='password' required onChange={(e)=>setPassword(e.target.value)} className={Login.input}
       id="exampleInputPassword1"
     />
   </div>
-  <button type="submit" className="btn btn-primary">
+  <button type="submit"  className={Login.submit}>
     Submit
   </button>
+  <Link href={'/registeruser'} className={Login.notaccount} >Not Have An Account ?</Link>
 </form>
-<Link href={'/registeruser'}>Not Have An Account ?</Link>
+
 </div>
 </>
   )
