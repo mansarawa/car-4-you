@@ -10,6 +10,7 @@ import Link from 'next/link'
 const page = () => {
   const router = useRouter()
     const [email,setEmail]=useState()
+    let a=10;
     const [state,setState]=useState(false)
     const [password,setPassword]=useState()
     const [alert,setAlert]=useState()
@@ -33,7 +34,9 @@ const page = () => {
           console.log(JSON.parse(localStorage.getItem("user")))
           //setAlert(user.username)
           router.push('/')
+          
         }
+        
         // else{
         //   setState(true)
         //   if(state)

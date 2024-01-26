@@ -7,5 +7,5 @@ export const showbooking=async(req,res)=>{
     //     console.log(pickup)
     // }
    return res.json({book:find,message:"your booking",success :true}) 
-   console.log(myBook)
+   console.log(find)
 }

@@ -2,16 +2,23 @@
 import Image from 'next/image'
 import Fortuner from '../../../assets/fortuner.png'
 import React from 'react'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import Book from './book.module.css'
 export default function page  ()  {
   const [pickup, setPickup] = useState()
   const [drop,setDrop]=useState();
-
+  const router=useRouter()
   const [pickupdate,setPickpupdate]=useState();
   const [dropdate,setDropdate]=useState();
   const [process, setProcess] = useState('process')
   const user=JSON.parse(localStorage.getItem('user'))
+  
+   if(user._id==null)
+   {
+    router.push('/login')
+   }
+  
    const userid=user._id
   console.log(user)
   const handlesubmit=async()=>{
@@ -35,6 +42,7 @@ export default function page  ()  {
     {
       console.log("booking conformed")
     }
+
    
   }
   return (
