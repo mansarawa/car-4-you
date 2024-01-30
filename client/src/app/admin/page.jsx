@@ -39,6 +39,7 @@ export default function Page() {
         }),
       });
       fetchData();
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }
@@ -56,9 +57,11 @@ export default function Page() {
         }),
       });
       fetchData();
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }
+    
   }
 
   async function handleReject(id) {
@@ -73,6 +76,7 @@ export default function Page() {
         }),
       });
       fetchData();
+      window.location.reload();
     } catch (error) {
       console.log(error);
     }

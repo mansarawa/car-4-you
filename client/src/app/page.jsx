@@ -1,22 +1,25 @@
 'use client'
 import Link from 'next/link'
-
+import Scarpio from '../../assets/scarpio.png'
 import Page from './page.module.css'
 import Image from 'next/image'
 import Fortuner from '../../assets/fortuner.png'
+import Innova from '../../assets/innova.png'
+import Dzire from '../../assets/dzire.png'
 import Thar from '../../assets/thar.jpg'
 import UserPhoto from '../../assets/userphoto.jpg'
 import { useEffect } from 'react'
-import Swift from '../../assets/swift.jpg'
+import Swift from '../../assets/swift.png'
 import { useRouter } from 'next/navigation'
-import Ertiga from '../../assets/ertiga.jpeg'
-
+import Ertiga from '../../assets/ertiga.png'
+import Etios from '../../assets/etios.png'
+import Carens from '../../assets/carens.png'
+import Alto from '../../assets/alto.png'
 export default function Home() {
   const router=useRouter()
 
    const user=JSON.parse(localStorage.getItem('user'))
-  //  const myTimeout = setTimeout( window.location.reload(), 1000);
-
+  //  const myTimeout = setTimeout(() => window.location.reload(), 1000);
   //  function myStopFunction() {
   //    clearTimeout(myTimeout);
   //  }
@@ -24,7 +27,6 @@ export default function Home() {
     e.preventDefault();
     localStorage.clear("user") 
     window.location.reload()
-    router.push('/')
   }
   return (
     <body style={{ margin: '0px' }}>
@@ -72,71 +74,71 @@ export default function Home() {
             <h4 className={Page.model} >2017</h4>
             <h3 style={{marginBottom:'1%'}}>Fortuner</h3>
             <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>
-            {user ?<Link href={'/book'} className={Page.rent} >Rent now</Link>
+            {user ?<Link href={'/book/fortuner'} className={Page.rent} >Rent now</Link>
               :<Link href={'/login'} className={Page.rent} >Rent Now</Link>}
           </div>
           <div className={Page.cars}>
             <Image src={Thar} className={Page.carslogo} />
             <h4 className={Page.model}>2017</h4>
-            <h3 style={{marginBottom:'1%'}}>Fortuner</h3>
+            <h3 style={{marginBottom:'1%'}}>Thar</h3>
             <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>
-            {user ?<Link href={'/book'} className={Page.rent} >Rent now</Link>
+            {user ?<Link href={'/book/thar'} className={Page.rent} >Rent now</Link>
+              :<Link href={'/login'} className={Page.rent} >Rent Now</Link>}
+          </div>
+          <div className={Page.cars} >
+            <Image src={Scarpio} className={Page.carslogo} />
+            <h4 className={Page.model}>2017</h4>
+            <h3 style={{marginBottom:'1%'}}>Scarpio</h3>
+            <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>
+            {user ?<Link href={'/book/swift'} className={Page.rent} >Rent now</Link>
+              :<Link href={'/login'} className={Page.rent} >Rent Now</Link>}
+          </div>
+          <div className={Page.cars}>
+            <Image src={Carens} className={Page.carslogo} />
+            <h4 className={Page.model}>2017</h4>
+            <h3 style={{marginBottom:'1%'}}>Carens</h3>
+            <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>
+            {user ?<Link href={'/book/carens'} className={Page.rent} >Rent now</Link>
+              :<Link href={'/login'} className={Page.rent} >Rent Now</Link>}
+          </div>
+          <div className={Page.cars}>
+            <Image src={Innova} className={Page.carslogo} />
+            <h4 className={Page.model}>2017</h4>
+            <h3 style={{marginBottom:'1%'}}>Innova</h3>
+            <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>
+            {user ?<Link href={'/book/innova'} className={Page.rent} >Rent now</Link>
+              :<Link href={'/login'} className={Page.rent} >Rent Now</Link>}
+          </div>
+          <div className={Page.cars}>
+            <Image src={Ertiga} className={Page.carslogo} />
+            <h4 className={Page.model}>2017</h4>
+            <h3 style={{marginBottom:'1%'}}>Ertiga</h3>
+            <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>
+            {user ?<Link href={'/book/ertiga'} className={Page.rent} >Rent now</Link>
               :<Link href={'/login'} className={Page.rent} >Rent Now</Link>}
           </div>
           <div className={Page.cars} >
             <Image src={Swift} className={Page.carslogo} />
             <h4 className={Page.model}>2017</h4>
-            <h3 style={{marginBottom:'1%'}}>Fortuner</h3>
+            <h3 style={{marginBottom:'1%'}}>Swift</h3>
             <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>
-            {user ?<Link href={'/book'} className={Page.rent} >Rent now</Link>
+            {user ?<Link href={'/book/swift'} className={Page.rent} >Rent now</Link>
               :<Link href={'/login'} className={Page.rent} >Rent Now</Link>}
           </div>
           <div className={Page.cars}>
-            <Image src={Fortuner} className={Page.carslogo} />
+            <Image src={Alto} className={Page.carslogo} />
             <h4 className={Page.model}>2017</h4>
-            <h3 style={{marginBottom:'1%'}}>Fortuner</h3>
+            <h3 style={{marginBottom:'1%'}}>Alto</h3>
             <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>
-            {user ?<Link href={'/book'} className={Page.rent} >Rent now</Link>
+            {user ?<Link href={'/book/alto'} className={Page.rent} >Rent now</Link>
               :<Link href={'/login'} className={Page.rent} >Rent Now</Link>}
           </div>
           <div className={Page.cars}>
-            <Image src={Fortuner} className={Page.carslogo} />
+            <Image src={Etios} className={Page.carslogo} />
             <h4 className={Page.model}>2017</h4>
-            <h3 style={{marginBottom:'1%'}}>Fortuner</h3>
+            <h3 style={{marginBottom:'1%'}}>Etios</h3>
             <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>
-            {user ?<Link href={'/book'} className={Page.rent} >Rent now</Link>
-              :<Link href={'/login'} className={Page.rent} >Rent Now</Link>}
-          </div>
-          <div className={Page.cars}>
-            <Image src={Fortuner} className={Page.carslogo} />
-            <h4 className={Page.model}>2017</h4>
-            <h3 style={{marginBottom:'1%'}}>Fortuner</h3>
-            <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>
-            {user ?<Link href={'/book'} className={Page.rent} >Rent now</Link>
-              :<Link href={'/login'} className={Page.rent} >Rent Now</Link>}
-          </div>
-          <div className={Page.cars}>
-            <Image src={Fortuner} className={Page.carslogo} />
-            <h4 className={Page.model}>2017</h4>
-            <h3 style={{marginBottom:'1%'}}>Fortuner</h3>
-            <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>
-            {user ?<Link href={'/book'} className={Page.rent} >Rent now</Link>
-              :<Link href={'/login'} className={Page.rent} >Rent Now</Link>}
-          </div>
-          <div className={Page.cars}>
-            <Image src={Fortuner} className={Page.carslogo} />
-            <h4 className={Page.model}>2017</h4>
-            <h3 style={{marginBottom:'1%'}}>Fortuner</h3>
-            <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>
-            {user ?<Link href={'/book'} className={Page.rent} >Rent now</Link>
-              :<Link href={'/login'} className={Page.rent} >Rent Now</Link>}
-          </div>
-          <div className={Page.cars}>
-            <Image src={Fortuner} className={Page.carslogo} />
-            <h4 className={Page.model}>2017</h4>
-            <h3 style={{marginBottom:'1%'}}>Fortuner</h3>
-            <h3 style={{ color: 'coral', marginBottom: '4%' }}>200₹ per Hour</h3>
-            {user ?<Link href={'/book'} className={Page.rent} >Rent now</Link>
+            {user ?<Link href={'/book/etios'} className={Page.rent} >Rent now</Link>
               :<Link href={'/login'} className={Page.rent} >Rent Now</Link>}
           </div>
         </main>

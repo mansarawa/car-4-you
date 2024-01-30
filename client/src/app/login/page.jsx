@@ -34,7 +34,6 @@ const page = () => {
           console.log(JSON.parse(localStorage.getItem("user")))
           //setAlert(user.username)
           router.push('/')
-          
         }
         
         // else{
