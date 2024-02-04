@@ -1,0 +1,23 @@
+.ul{
+    margin-top:15px;
+    font-size: 23px;
+    height: 20px;
+    align-items: center;
+   display: flex;
+   
+  }
+  .li{
+    float: right;
+    list-style-type: none;
+    margin-left: 3%;
+  }
+  .link{
+    color: #0d6efd;
+    text-decoration: none;
+  }
+  .hnav{
+    height: 72px;
+  }
+  .burger{
+    display: block;
+  }

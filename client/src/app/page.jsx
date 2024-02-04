@@ -18,7 +18,7 @@ import Alto from '../../assets/alto.png'
 export default function Home() {
   const router=useRouter()
 
-   const user=JSON.parse(localStorage.getItem('user'))
+  const user = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : null;
   //  const myTimeout = setTimeout(() => window.location.reload(), 1000);
   //  function myStopFunction() {
   //    clearTimeout(myTimeout);
@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <body style={{ margin: '0px' }}>
       <div className={Page.container}>
-        <nav className={Page.hnav}>
+        {/* <nav className={Page.hnav}>
           <ul className={Page.ul}>
             <li className={Page.li}><Link href='/' className={Page.link}>Home</Link></li>
             <li className={Page.li}><Link href='/service' className={Page.link}>Services</Link></li>
@@ -47,7 +47,7 @@ export default function Home() {
           </div>
           </ul>
           
-        </nav>
+        </nav> */}
         <header className={Page.header}>
           <div className={Page.hometext}>
             <h1 className={Page.movingtext} style={{ fontSize: '50px', marginBottom: '0' }}>CAR4YOU</h1>
