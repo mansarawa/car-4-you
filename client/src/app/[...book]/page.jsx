@@ -19,18 +19,20 @@ export default function page  (params)  {
   const [pickupdate,setPickpupdate]=useState();
   const [dropdate,setDropdate]=useState();
   const [process, setProcess] = useState('process')
-  const user=JSON.parse(localStorage.getItem('user'))
+  const user = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : null;
   const [pickuptime, setPickuptime] = useState('')
-  const [droptime, setDroptime] = useState('')
+  const [droptime, setDroptime] = useState('')  
+  const userid = user && user._id;
 
-   if(user._id==null)
-   {
-    router.push('/login')
-   }
-  
-   const userid=user._id
+if (userid == null) {
+  router.push('/login');
+}
+
   console.log(user)
   const handlesubmit=async()=>{
+    try {
+      
+    
     const res=await fetch('http://localhost:3002/book',{
       method:"post",
       headers:{
@@ -55,10 +57,12 @@ export default function page  (params)  {
     if(result =='booking conformed')
     {
       console.log("booking conformed")
-     
+      router.push('/');
     }
-    router.push('/');
     
+  } catch (error) {
+      console.log(error)
+  }
   }
   return (
     <div className={Book.container}>
@@ -68,11 +72,11 @@ export default function page  (params)  {
           <h1 className={Book.heading}>Booking For {carname.charAt(0).toUpperCase() + carname.slice(1)}</h1>
           <div className={Book.inputbox}>
             <span>Pick up </span> 
-            <input type="text" required onChange={(e)=>setPickup(e.target.value)} style={{padding:'7px',outline:"none",border:'none'}} name="location" id="" />
+            <input type="text" required onChange={(e)=>setPickup(e.target.value)} style={{padding:'7px',outline:"none",border:'none'}} name="pickuplocation" id="" />
           </div>
           <div className={Book.inputbox}>
             <span>Drop</span>
-            <input type="text" required onChange={(e)=>setDrop(e.target.value)} style={{padding:'7px',outline:"none",border:'none'}} name="location" id="" />
+            <input type="text" required onChange={(e)=>setDrop(e.target.value)} style={{padding:'7px',outline:"none",border:'none'}} name="droplocation" id="" />
           </div>
           <div className={Book.inputbox}>
             <span>Pick-Up Date</span>

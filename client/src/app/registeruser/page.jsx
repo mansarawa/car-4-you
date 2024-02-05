@@ -10,7 +10,7 @@ const page = () => {
     const [email,setEmail]=useState()
     const [username,setUsername]=useState()
     const [password,setPassword]=useState()
-    const user=JSON.parse(localStorage.getItem("user"))
+    const user = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : null;
     const handleSubmit=async()=>{
         
         const res=await fetch('http://localhost:3002/createuser',{

@@ -14,8 +14,11 @@ const page = () => {
     const [state,setState]=useState(false)
     const [password,setPassword]=useState()
     const [alert,setAlert]=useState()
-    const user=JSON.parse(localStorage.getItem("user"))
+    const user = typeof window !== 'undefined' ? JSON.parse(localStorage.getItem('user')) : null;
     const handleSubmit=async(e)=>{
+      try {
+        
+      
       e.preventDefault();
         const res=await fetch('http://localhost:3002/login',{
           method:'post',
@@ -36,17 +39,9 @@ const page = () => {
           router.push('/')
         }
         
-        // else{
-        //   setState(true)
-        //   if(state)
-        //        {
-        //         //  setAlert('Please fill right info')
-        //          setTimeout(()=>{
-        //           setState(false)
-        //          },[2000])
-        //        }     
-          
-        // }
+      } catch (error) {
+        console.log(error)
+      }
     }
   return (
    <>
